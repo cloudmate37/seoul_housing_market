@@ -11,11 +11,15 @@
   * { box-sizing:border-box; }
   body { margin:0; background:#eef2f7; color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",Segoe UI,sans-serif; }
   .report-hero { padding:34px max(24px,calc((100% - 1180px)/2)); background:linear-gradient(120deg,#102f50,#0f766e); color:white; }
+  .report-hero-nav { display:flex; justify-content:flex-end; margin-bottom:18px; }
+  .back-to-index { display:inline-flex; align-items:center; gap:7px; padding:9px 13px; border:1px solid rgba(255,255,255,.42); border-radius:999px; color:white; background:rgba(255,255,255,.1); text-decoration:none; font-size:13px; font-weight:700; }
+  .back-to-index:hover { background:rgba(255,255,255,.2); }
+  .back-to-index:focus-visible { outline:3px solid rgba(255,255,255,.65); outline-offset:3px; }
   .report-hero .kicker { margin:0 0 8px; opacity:.78; letter-spacing:.08em; font-size:13px; }
   .report-hero h1 { margin:0; font-size:clamp(26px,4vw,42px); font-weight:700; }
   .report-hero p { margin:12px 0 0; max-width:820px; color:#d9edf0; }
   .map-instruction { padding:12px max(24px,calc((100% - 1180px)/2)); background:#dff5f1; color:#0d5f58; font-weight:600; }
-  #map_2dd6307b8570d82ebcb1560e00344c0f { height:410px !important; width:100% !important; border-bottom:1px solid #cbd5e1; }
+  #map_c880b859c8ca06b31ff8ad56781e2ddd { height:410px !important; width:100% !important; border-bottom:1px solid #cbd5e1; }
   .report-shell { max-width:1180px; margin:0 auto; padding:26px 24px 52px; }
   .report-tabs { display:flex; gap:6px; padding:5px; margin-bottom:18px; border:1px solid var(--line); border-radius:13px; background:#e7edf4; width:max-content; max-width:100%; }
   .report-tab { border:0; border-radius:9px; padding:10px 16px; background:transparent; color:#526174; font:inherit; font-weight:700; cursor:pointer; white-space:nowrap; }
@@ -82,7 +86,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_2dd6307b8570d82ebcb1560e00344c0f {
+                #map_c880b859c8ca06b31ff8ad56781e2ddd {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -118,6 +122,9 @@
 </head>
 <body>
 <header class="report-hero">
+  <nav class="report-hero-nav" aria-label="관련 보고서">
+    <a class="back-to-index" href="https://cloudmate37.github.io/seoul_housing_market/">← 서울 주택 반복매매지수</a>
+  </nav>
   <p class="kicker">SEOUL APARTMENT TRANSACTION REVIEW · 2023–2026</p>
   <h1>연희·가재울 아파트 매매가 변화</h1>
   <p>연희·가재울 7개 아파트 단지의 실거래가를 전용면적형별로 비교합니다.</p>
@@ -126,7 +133,7 @@
 
     
     
-            <div class="folium-map" id="map_2dd6307b8570d82ebcb1560e00344c0f" ></div>
+            <div class="folium-map" id="map_c880b859c8ca06b31ff8ad56781e2ddd" ></div>
         
 
 <main class="report-shell">
@@ -241,8 +248,8 @@
 <script>
     
     
-            var map_2dd6307b8570d82ebcb1560e00344c0f = L.map(
-                "map_2dd6307b8570d82ebcb1560e00344c0f",
+            var map_c880b859c8ca06b31ff8ad56781e2ddd = L.map(
+                "map_c880b859c8ca06b31ff8ad56781e2ddd",
                 {
                     center: [37.575849842857146, 126.91916769999999],
                     crs: L.CRS.EPSG3857,
@@ -254,13 +261,13 @@
 
                 }
             );
-            L.control.scale().addTo(map_2dd6307b8570d82ebcb1560e00344c0f);
+            L.control.scale().addTo(map_c880b859c8ca06b31ff8ad56781e2ddd);
 
             
 
         
     
-            var tile_layer_70f18a7c1961deb0d3ee7c01e49e8e85 = L.tileLayer(
+            var tile_layer_7f803e8c4fa480e613274ced31e87708 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -277,17 +284,17 @@
             );
         
     
-            tile_layer_70f18a7c1961deb0d3ee7c01e49e8e85.addTo(map_2dd6307b8570d82ebcb1560e00344c0f);
+            tile_layer_7f803e8c4fa480e613274ced31e87708.addTo(map_c880b859c8ca06b31ff8ad56781e2ddd);
         
     
-            var marker_6014543dfdf36caa497566defeb72b1a = L.marker(
+            var marker_08b771ec4bf56f0e204b5c0d3be649bb = L.marker(
                 [37.5759173, 126.9287991],
                 {
 }
-            ).addTo(map_2dd6307b8570d82ebcb1560e00344c0f);
+            ).addTo(map_c880b859c8ca06b31ff8ad56781e2ddd);
         
     
-            var icon_85d6fb5cbf73a930bcb41bec82b8c996 = L.AwesomeMarkers.icon(
+            var icon_01721f515f12775d52cf488aa061090c = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -298,24 +305,24 @@
             );
         
     
-        var popup_5c42e50b9153efdea42c6c7698abca66 = L.popup({
+        var popup_94899dd970c808cb23d35bd3a57343f0 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_b545c6631d22ff07b046222d0db54717 = $(`<div id="html_b545c6631d22ff07b046222d0db54717" style="width: 100.0%; height: 100.0%;"><div class="popup-title">연희파크푸르지오</div><div>서울특별시 서대문구 홍제천로 136</div><div>396세대 · 2018년 준공</div><div>유효 거래 78건</div><div class="popup-note">마커를 클릭하면 아래 분석이 바뀝니다.</div></div>`)[0];
-                popup_5c42e50b9153efdea42c6c7698abca66.setContent(html_b545c6631d22ff07b046222d0db54717);
+                var html_5b514a564679edd986eb1cec05f8f591 = $(`<div id="html_5b514a564679edd986eb1cec05f8f591" style="width: 100.0%; height: 100.0%;"><div class="popup-title">연희파크푸르지오</div><div>서울특별시 서대문구 홍제천로 136</div><div>396세대 · 2018년 준공</div><div>유효 거래 78건</div><div class="popup-note">마커를 클릭하면 아래 분석이 바뀝니다.</div></div>`)[0];
+                popup_94899dd970c808cb23d35bd3a57343f0.setContent(html_5b514a564679edd986eb1cec05f8f591);
             
         
 
-        marker_6014543dfdf36caa497566defeb72b1a.bindPopup(popup_5c42e50b9153efdea42c6c7698abca66)
+        marker_08b771ec4bf56f0e204b5c0d3be649bb.bindPopup(popup_94899dd970c808cb23d35bd3a57343f0)
         ;
 
         
     
     
-            marker_6014543dfdf36caa497566defeb72b1a.bindTooltip(
+            marker_08b771ec4bf56f0e204b5c0d3be649bb.bindTooltip(
                 `<div>
                      연희파크푸르지오 · 클릭하여 분석 선택
                  </div>`,
@@ -325,17 +332,17 @@
             );
         
     
-                marker_6014543dfdf36caa497566defeb72b1a.setIcon(icon_85d6fb5cbf73a930bcb41bec82b8c996);
+                marker_08b771ec4bf56f0e204b5c0d3be649bb.setIcon(icon_01721f515f12775d52cf488aa061090c);
             
     
-            var marker_c4bbcbb5a4d9af7861e79bac769ba6d5 = L.marker(
+            var marker_a842089c5ff604f71d07daf344965182 = L.marker(
                 [37.5791007, 126.9205767],
                 {
 }
-            ).addTo(map_2dd6307b8570d82ebcb1560e00344c0f);
+            ).addTo(map_c880b859c8ca06b31ff8ad56781e2ddd);
         
     
-            var icon_682f388756466cbe42b0728f51d7d66d = L.AwesomeMarkers.icon(
+            var icon_c04ebf2d1afa75c37bfe73b5310ce7c9 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -346,24 +353,24 @@
             );
         
     
-        var popup_31de28acc697ada2d083921b234f35fa = L.popup({
+        var popup_f16e671ca4488c07bbdfb8dd2860d915 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_717634ea5c79840a5ca416d361ac69aa = $(`<div id="html_717634ea5c79840a5ca416d361ac69aa" style="width: 100.0%; height: 100.0%;"><div class="popup-title">DMC센트럴아이파크</div><div>서울특별시 서대문구 증가로 150</div><div>1,061세대 · 2018년 준공</div><div>유효 거래 149건</div><div class="popup-note">마커를 클릭하면 아래 분석이 바뀝니다.</div></div>`)[0];
-                popup_31de28acc697ada2d083921b234f35fa.setContent(html_717634ea5c79840a5ca416d361ac69aa);
+                var html_1e3b2a44fbe087d4ff0eaefcfd763781 = $(`<div id="html_1e3b2a44fbe087d4ff0eaefcfd763781" style="width: 100.0%; height: 100.0%;"><div class="popup-title">DMC센트럴아이파크</div><div>서울특별시 서대문구 증가로 150</div><div>1,061세대 · 2018년 준공</div><div>유효 거래 149건</div><div class="popup-note">마커를 클릭하면 아래 분석이 바뀝니다.</div></div>`)[0];
+                popup_f16e671ca4488c07bbdfb8dd2860d915.setContent(html_1e3b2a44fbe087d4ff0eaefcfd763781);
             
         
 
-        marker_c4bbcbb5a4d9af7861e79bac769ba6d5.bindPopup(popup_31de28acc697ada2d083921b234f35fa)
+        marker_a842089c5ff604f71d07daf344965182.bindPopup(popup_f16e671ca4488c07bbdfb8dd2860d915)
         ;
 
         
     
     
-            marker_c4bbcbb5a4d9af7861e79bac769ba6d5.bindTooltip(
+            marker_a842089c5ff604f71d07daf344965182.bindTooltip(
                 `<div>
                      DMC센트럴아이파크 · 클릭하여 분석 선택
                  </div>`,
@@ -373,17 +380,17 @@
             );
         
     
-                marker_c4bbcbb5a4d9af7861e79bac769ba6d5.setIcon(icon_682f388756466cbe42b0728f51d7d66d);
+                marker_a842089c5ff604f71d07daf344965182.setIcon(icon_c04ebf2d1afa75c37bfe73b5310ce7c9);
             
     
-            var marker_a45291c534e4f1a275631fc168ff18b3 = L.marker(
+            var marker_2aa3a8dd68333b17a7dad00ec0da4e4e = L.marker(
                 [37.5749844, 126.9154354],
                 {
 }
-            ).addTo(map_2dd6307b8570d82ebcb1560e00344c0f);
+            ).addTo(map_c880b859c8ca06b31ff8ad56781e2ddd);
         
     
-            var icon_1052e01e8bf65c009a75ee9e1944828e = L.AwesomeMarkers.icon(
+            var icon_9c126fba266c4e162b891cd5b4a98c35 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -394,24 +401,24 @@
             );
         
     
-        var popup_b71f7bd226e8dd568d06548034416963 = L.popup({
+        var popup_caa1e0c7676722c1e82dd0e29a65f923 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_c4281a38d7e7be0cc26f18e5c8dc236a = $(`<div id="html_c4281a38d7e7be0cc26f18e5c8dc236a" style="width: 100.0%; height: 100.0%;"><div class="popup-title">DMC파크뷰자이</div><div>서울특별시 서대문구 가재울미래로 2</div><div>4,300세대 · 2015년 준공</div><div>유효 거래 598건</div><div class="popup-note">마커를 클릭하면 아래 분석이 바뀝니다.</div></div>`)[0];
-                popup_b71f7bd226e8dd568d06548034416963.setContent(html_c4281a38d7e7be0cc26f18e5c8dc236a);
+                var html_427b8e0fde8b2b3bf54816cbefe9f975 = $(`<div id="html_427b8e0fde8b2b3bf54816cbefe9f975" style="width: 100.0%; height: 100.0%;"><div class="popup-title">DMC파크뷰자이</div><div>서울특별시 서대문구 가재울미래로 2</div><div>4,300세대 · 2015년 준공</div><div>유효 거래 598건</div><div class="popup-note">마커를 클릭하면 아래 분석이 바뀝니다.</div></div>`)[0];
+                popup_caa1e0c7676722c1e82dd0e29a65f923.setContent(html_427b8e0fde8b2b3bf54816cbefe9f975);
             
         
 
-        marker_a45291c534e4f1a275631fc168ff18b3.bindPopup(popup_b71f7bd226e8dd568d06548034416963)
+        marker_2aa3a8dd68333b17a7dad00ec0da4e4e.bindPopup(popup_caa1e0c7676722c1e82dd0e29a65f923)
         ;
 
         
     
     
-            marker_a45291c534e4f1a275631fc168ff18b3.bindTooltip(
+            marker_2aa3a8dd68333b17a7dad00ec0da4e4e.bindTooltip(
                 `<div>
                      DMC파크뷰자이 · 클릭하여 분석 선택
                  </div>`,
@@ -421,17 +428,17 @@
             );
         
     
-                marker_a45291c534e4f1a275631fc168ff18b3.setIcon(icon_1052e01e8bf65c009a75ee9e1944828e);
+                marker_2aa3a8dd68333b17a7dad00ec0da4e4e.setIcon(icon_9c126fba266c4e162b891cd5b4a98c35);
             
     
-            var marker_7e38361b3999050241a38fb1f51e9362 = L.marker(
+            var marker_842be77a65e21534fd3f0d09d0601a01 = L.marker(
                 [37.5780164, 126.9164163],
                 {
 }
-            ).addTo(map_2dd6307b8570d82ebcb1560e00344c0f);
+            ).addTo(map_c880b859c8ca06b31ff8ad56781e2ddd);
         
     
-            var icon_74cf239ba24fbf279f0880beb478d760 = L.AwesomeMarkers.icon(
+            var icon_005cf3842a10a961f3e0ae4bb871fbe7 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "orange",
   "iconColor": "white",
@@ -442,24 +449,24 @@
             );
         
     
-        var popup_ce5b6e1f3cff94c492cb501e7720674f = L.popup({
+        var popup_9485977867c90aea5043afd3a5fb963a = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_250218ff83f9648f9da67f69e3331325 = $(`<div id="html_250218ff83f9648f9da67f69e3331325" style="width: 100.0%; height: 100.0%;"><div class="popup-title">DMC래미안클라시스</div><div>서울특별시 서대문구 증가로 191</div><div>1,114세대 · 2000년 준공</div><div>유효 거래 208건</div><div class="popup-note">마커를 클릭하면 아래 분석이 바뀝니다.</div></div>`)[0];
-                popup_ce5b6e1f3cff94c492cb501e7720674f.setContent(html_250218ff83f9648f9da67f69e3331325);
+                var html_b9b99f35fb939b17c7cf1b75b3e2df46 = $(`<div id="html_b9b99f35fb939b17c7cf1b75b3e2df46" style="width: 100.0%; height: 100.0%;"><div class="popup-title">DMC래미안클라시스</div><div>서울특별시 서대문구 증가로 191</div><div>1,114세대 · 2000년 준공</div><div>유효 거래 208건</div><div class="popup-note">마커를 클릭하면 아래 분석이 바뀝니다.</div></div>`)[0];
+                popup_9485977867c90aea5043afd3a5fb963a.setContent(html_b9b99f35fb939b17c7cf1b75b3e2df46);
             
         
 
-        marker_7e38361b3999050241a38fb1f51e9362.bindPopup(popup_ce5b6e1f3cff94c492cb501e7720674f)
+        marker_842be77a65e21534fd3f0d09d0601a01.bindPopup(popup_9485977867c90aea5043afd3a5fb963a)
         ;
 
         
     
     
-            marker_7e38361b3999050241a38fb1f51e9362.bindTooltip(
+            marker_842be77a65e21534fd3f0d09d0601a01.bindTooltip(
                 `<div>
                      DMC래미안클라시스 · 클릭하여 분석 선택
                  </div>`,
@@ -469,17 +476,17 @@
             );
         
     
-                marker_7e38361b3999050241a38fb1f51e9362.setIcon(icon_74cf239ba24fbf279f0880beb478d760);
+                marker_842be77a65e21534fd3f0d09d0601a01.setIcon(icon_005cf3842a10a961f3e0ae4bb871fbe7);
             
     
-            var marker_1feea2b07c758960a5f80fe5f9655f34 = L.marker(
+            var marker_fd18ba614da0013500b3ac4f5ee03b34 = L.marker(
                 [37.5703887, 126.9159889],
                 {
 }
-            ).addTo(map_2dd6307b8570d82ebcb1560e00344c0f);
+            ).addTo(map_c880b859c8ca06b31ff8ad56781e2ddd);
         
     
-            var icon_344837302e7c2110b399bc8abdacb994 = L.AwesomeMarkers.icon(
+            var icon_0d12a084da26406727194e497a80b157 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "cadetblue",
   "iconColor": "white",
@@ -490,24 +497,24 @@
             );
         
     
-        var popup_2e288f8578b889a5d580f8a0b6b1d82d = L.popup({
+        var popup_0f3808d5c134afecea01b02208d8d5cd = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_bbdbfa73ff3b8ca012e5e7ee6aa4741b = $(`<div id="html_bbdbfa73ff3b8ca012e5e7ee6aa4741b" style="width: 100.0%; height: 100.0%;"><div class="popup-title">DMC금호리첸시아</div><div>서울특별시 서대문구 수색로2길 39</div><div>450세대 · 2024년 준공</div><div>유효 거래 60건</div><div class="popup-note">마커를 클릭하면 아래 분석이 바뀝니다.</div></div>`)[0];
-                popup_2e288f8578b889a5d580f8a0b6b1d82d.setContent(html_bbdbfa73ff3b8ca012e5e7ee6aa4741b);
+                var html_aba576a6a5664dba86432b48fe0ca9fc = $(`<div id="html_aba576a6a5664dba86432b48fe0ca9fc" style="width: 100.0%; height: 100.0%;"><div class="popup-title">DMC금호리첸시아</div><div>서울특별시 서대문구 수색로2길 39</div><div>450세대 · 2024년 준공</div><div>유효 거래 60건</div><div class="popup-note">마커를 클릭하면 아래 분석이 바뀝니다.</div></div>`)[0];
+                popup_0f3808d5c134afecea01b02208d8d5cd.setContent(html_aba576a6a5664dba86432b48fe0ca9fc);
             
         
 
-        marker_1feea2b07c758960a5f80fe5f9655f34.bindPopup(popup_2e288f8578b889a5d580f8a0b6b1d82d)
+        marker_fd18ba614da0013500b3ac4f5ee03b34.bindPopup(popup_0f3808d5c134afecea01b02208d8d5cd)
         ;
 
         
     
     
-            marker_1feea2b07c758960a5f80fe5f9655f34.bindTooltip(
+            marker_fd18ba614da0013500b3ac4f5ee03b34.bindTooltip(
                 `<div>
                      DMC금호리첸시아 · 클릭하여 분석 선택
                  </div>`,
@@ -517,17 +524,17 @@
             );
         
     
-                marker_1feea2b07c758960a5f80fe5f9655f34.setIcon(icon_344837302e7c2110b399bc8abdacb994);
+                marker_fd18ba614da0013500b3ac4f5ee03b34.setIcon(icon_0d12a084da26406727194e497a80b157);
             
     
-            var marker_fdb31dd10162e396b63c1355b43af494 = L.marker(
+            var marker_03f21ac4be9c1ab15e3733daa46750ab = L.marker(
                 [37.5761011, 126.9177218],
                 {
 }
-            ).addTo(map_2dd6307b8570d82ebcb1560e00344c0f);
+            ).addTo(map_c880b859c8ca06b31ff8ad56781e2ddd);
         
     
-            var icon_468c4093b7650a730079234e36e327aa = L.AwesomeMarkers.icon(
+            var icon_b8cb8c9b96d110cba0f8e1e766aac9dd = L.AwesomeMarkers.icon(
                 {
   "markerColor": "darkgreen",
   "iconColor": "white",
@@ -538,24 +545,24 @@
             );
         
     
-        var popup_464e4360769a8f6ac76b0c40630876f2 = L.popup({
+        var popup_80318c1ac4bc38d7dc2c55dab0cee4db = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_e904a0b1fa677dc7864f9321c3c0138f = $(`<div id="html_e904a0b1fa677dc7864f9321c3c0138f" style="width: 100.0%; height: 100.0%;"><div class="popup-title">래미안루센티아</div><div>서울특별시 서대문구 거북골로 100</div><div>997세대 · 2020년 준공</div><div>유효 거래 120건</div><div class="popup-note">마커를 클릭하면 아래 분석이 바뀝니다.</div></div>`)[0];
-                popup_464e4360769a8f6ac76b0c40630876f2.setContent(html_e904a0b1fa677dc7864f9321c3c0138f);
+                var html_20c10eaf67dd89fad58838adaa21deb2 = $(`<div id="html_20c10eaf67dd89fad58838adaa21deb2" style="width: 100.0%; height: 100.0%;"><div class="popup-title">래미안루센티아</div><div>서울특별시 서대문구 거북골로 100</div><div>997세대 · 2020년 준공</div><div>유효 거래 120건</div><div class="popup-note">마커를 클릭하면 아래 분석이 바뀝니다.</div></div>`)[0];
+                popup_80318c1ac4bc38d7dc2c55dab0cee4db.setContent(html_20c10eaf67dd89fad58838adaa21deb2);
             
         
 
-        marker_fdb31dd10162e396b63c1355b43af494.bindPopup(popup_464e4360769a8f6ac76b0c40630876f2)
+        marker_03f21ac4be9c1ab15e3733daa46750ab.bindPopup(popup_80318c1ac4bc38d7dc2c55dab0cee4db)
         ;
 
         
     
     
-            marker_fdb31dd10162e396b63c1355b43af494.bindTooltip(
+            marker_03f21ac4be9c1ab15e3733daa46750ab.bindTooltip(
                 `<div>
                      래미안루센티아 · 클릭하여 분석 선택
                  </div>`,
@@ -565,17 +572,17 @@
             );
         
     
-                marker_fdb31dd10162e396b63c1355b43af494.setIcon(icon_468c4093b7650a730079234e36e327aa);
+                marker_03f21ac4be9c1ab15e3733daa46750ab.setIcon(icon_b8cb8c9b96d110cba0f8e1e766aac9dd);
             
     
-            var marker_8592693e6a55526e7b3fb65c6cc7ce91 = L.marker(
+            var marker_485fa55d76045a3fd028259e72714ac8 = L.marker(
                 [37.5764403, 126.9192357],
                 {
 }
-            ).addTo(map_2dd6307b8570d82ebcb1560e00344c0f);
+            ).addTo(map_c880b859c8ca06b31ff8ad56781e2ddd);
         
     
-            var icon_a71ab7644a0bc21d42a4834c755acbe9 = L.AwesomeMarkers.icon(
+            var icon_ed1cac1e05e3437cc9ec269191216f11 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "darkblue",
   "iconColor": "white",
@@ -586,24 +593,24 @@
             );
         
     
-        var popup_e1340ccab10ec8c2e2a2eedffcb39ce9 = L.popup({
+        var popup_1e63deb34e6f4b8a9a25d35ab896b233 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_863b8f5ee5ab3232bc8a06b3333406fb = $(`<div id="html_863b8f5ee5ab3232bc8a06b3333406fb" style="width: 100.0%; height: 100.0%;"><div class="popup-title">DMC에코자이</div><div>서울특별시 서대문구 거북골로 84</div><div>1,047세대 · 2019년 준공</div><div>유효 거래 179건</div><div class="popup-note">마커를 클릭하면 아래 분석이 바뀝니다.</div></div>`)[0];
-                popup_e1340ccab10ec8c2e2a2eedffcb39ce9.setContent(html_863b8f5ee5ab3232bc8a06b3333406fb);
+                var html_20b8655628a12aa8bd2c2a1179ca9edc = $(`<div id="html_20b8655628a12aa8bd2c2a1179ca9edc" style="width: 100.0%; height: 100.0%;"><div class="popup-title">DMC에코자이</div><div>서울특별시 서대문구 거북골로 84</div><div>1,047세대 · 2019년 준공</div><div>유효 거래 179건</div><div class="popup-note">마커를 클릭하면 아래 분석이 바뀝니다.</div></div>`)[0];
+                popup_1e63deb34e6f4b8a9a25d35ab896b233.setContent(html_20b8655628a12aa8bd2c2a1179ca9edc);
             
         
 
-        marker_8592693e6a55526e7b3fb65c6cc7ce91.bindPopup(popup_e1340ccab10ec8c2e2a2eedffcb39ce9)
+        marker_485fa55d76045a3fd028259e72714ac8.bindPopup(popup_1e63deb34e6f4b8a9a25d35ab896b233)
         ;
 
         
     
     
-            marker_8592693e6a55526e7b3fb65c6cc7ce91.bindTooltip(
+            marker_485fa55d76045a3fd028259e72714ac8.bindTooltip(
                 `<div>
                      DMC에코자이 · 클릭하여 분석 선택
                  </div>`,
@@ -613,10 +620,10 @@
             );
         
     
-                marker_8592693e6a55526e7b3fb65c6cc7ce91.setIcon(icon_a71ab7644a0bc21d42a4834c755acbe9);
+                marker_485fa55d76045a3fd028259e72714ac8.setIcon(icon_ed1cac1e05e3437cc9ec269191216f11);
             
     
-            map_2dd6307b8570d82ebcb1560e00344c0f.fitBounds(
+            map_c880b859c8ca06b31ff8ad56781e2ddd.fitBounds(
                 [[37.5759173, 126.9287991], [37.5791007, 126.9205767], [37.5749844, 126.9154354], [37.5780164, 126.9164163], [37.5703887, 126.9159889], [37.5761011, 126.9177218], [37.5764403, 126.9192357]],
                 {"padding": [45, 45]}
             );
@@ -839,13 +846,13 @@ document.getElementById('interest-area-filter').addEventListener('change', funct
 document.getElementById('analysis-tab').addEventListener('click', ()=>activateReportTab('analysis'));
 document.getElementById('interest-tab').addEventListener('click', ()=>activateReportTab('interest'));
 
-marker_6014543dfdf36caa497566defeb72b1a.on('click', function() { window.selectComplex("연희파크푸르지오"); });
-marker_c4bbcbb5a4d9af7861e79bac769ba6d5.on('click', function() { window.selectComplex("DMC센트럴아이파크"); });
-marker_a45291c534e4f1a275631fc168ff18b3.on('click', function() { window.selectComplex("DMC파크뷰자이"); });
-marker_7e38361b3999050241a38fb1f51e9362.on('click', function() { window.selectComplex("DMC래미안클라시스"); });
-marker_1feea2b07c758960a5f80fe5f9655f34.on('click', function() { window.selectComplex("DMC금호리첸시아"); });
-marker_fdb31dd10162e396b63c1355b43af494.on('click', function() { window.selectComplex("래미안루센티아"); });
-marker_8592693e6a55526e7b3fb65c6cc7ce91.on('click', function() { window.selectComplex("DMC에코자이"); });
+marker_08b771ec4bf56f0e204b5c0d3be649bb.on('click', function() { window.selectComplex("연희파크푸르지오"); });
+marker_a842089c5ff604f71d07daf344965182.on('click', function() { window.selectComplex("DMC센트럴아이파크"); });
+marker_2aa3a8dd68333b17a7dad00ec0da4e4e.on('click', function() { window.selectComplex("DMC파크뷰자이"); });
+marker_842be77a65e21534fd3f0d09d0601a01.on('click', function() { window.selectComplex("DMC래미안클라시스"); });
+marker_fd18ba614da0013500b3ac4f5ee03b34.on('click', function() { window.selectComplex("DMC금호리첸시아"); });
+marker_03f21ac4be9c1ab15e3733daa46750ab.on('click', function() { window.selectComplex("래미안루센티아"); });
+marker_485fa55d76045a3fd028259e72714ac8.on('click', function() { window.selectComplex("DMC에코자이"); });
 renderInterest2026();
 window.selectComplex(activeComplex);
 
